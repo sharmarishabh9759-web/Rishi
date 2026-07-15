@@ -1,23 +1,291 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Rishabh Sharma | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="hero">
-  <img src="profile.jpg" alt="Rishabh Sharma" class="profile">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',Arial,sans-serif;
+scroll-behavior:smooth;
+}
 
-  <h1>Rishabh Sharma</h1>
+body{
+background:#050816;
+color:#fff;
+overflow-x:hidden;
+}
 
-  <h2>B.Pharm Student</h2>
+/* Animated background */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top left,#0056d2,transparent 35%),
+radial-gradient(circle at bottom right,#00eaff,transparent 35%);
+z-index:-1;
+animation:bgmove 8s infinite alternate;
+}
 
-  <p>Passionate about Healthcare, Learning & Technology.</p>
+@keyframes bgmove{
+0%{filter:hue-rotate(0deg)}
+100%{filter:hue-rotate(60deg)}
+}
 
-  <div class="buttons">
-    <a href="#contact" class="btn">Contact Me</a>
-    <a href="Introduction_A1_PDF.pdf" class="btn">Download Resume</a>
-  </div>
-</header>
-</body>
-</html>
+
+header{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.2);
+color:white;
+padding:80px 20px;
+text-align:center;
+animation:slideDown 1s;
+}
+
+@keyframes slideDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+header img{
+width:170px;
+height:170px;
+border-radius:50%;
+border:5px solid #00eaff;
+object-fit:cover;
+box-shadow:
+0 0 25px #00eaff,
+0 0 50px #0056d2;
+animation:float 3s infinite;
+}
+
+
+@keyframes float{
+50%{
+transform:translateY(-12px);
+}
+}
+
+
+header h1{
+font-size:45px;
+background:linear-gradient(90deg,#00eaff,#fff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+
+header p{
+font-size:20px;
+margin-top:15px;
+}
+
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+
+.card{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+
+padding:35px;
+margin-bottom:30px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.4);
+
+transition:.5s;
+
+animation:fadeUp 1s;
+}
+
+
+.card:hover{
+
+transform:
+translateY(-10px)
+scale(1.02);
+
+box-shadow:
+0 0 30px #0056d2;
+
+}
+
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+h2{
+
+color:#00eaff;
+
+margin-bottom:20px;
+
+text-shadow:
+0 0 10px #00eaff;
+
+}
+
+
+.info p{
+
+margin:18px 0;
+
+font-size:18px;
+
+}
+
+
+.info i{
+
+color:#00eaff;
+
+width:35px;
+
+}
+
+
+.skills{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+
+.skill{
+
+background:linear-gradient(
+135deg,
+#0056d2,
+#00eaff
+);
+
+padding:12px 22px;
+
+border-radius:30px;
+
+box-shadow:
+0 0 15px #0056d2;
+
+transition:.3s;
+
+}
+
+
+.skill:hover{
+
+transform:scale(1.15);
+
+}
+
+
+.social{
+
+text-align:center;
+
+}
+
+
+.social a{
+
+display:inline-block;
+
+margin:12px;
+
+font-size:32px;
+
+color:#00eaff;
+
+transition:.4s;
+
+}
+
+
+.social a:hover{
+
+transform:
+translateY(-10px)
+rotate(10deg);
+
+text-shadow:
+0 0 20px #00eaff;
+
+}
+
+
+.btn{
+
+display:inline-block;
+
+margin-top:25px;
+
+padding:14px 30px;
+
+background:
+linear-gradient(135deg,#0056d2,#00eaff);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+box-shadow:
+0 0 20px #0056d2;
+
+transition:.4s;
+
+}
+
+
+.btn:hover{
+
+transform:scale(1.1);
+
+}
+
+
+footer{
+
+background:rgba(0,0,0,.5);
+
+backdrop-filter:blur(10px);
+
+text-align:center;
+
+padding:25px;
+
+color:#00eaff;
+
+}
