@@ -1,0 +1,1 @@
+setInterval(()=>{document.title="🔥 Rishabh Sharma";},1000);
